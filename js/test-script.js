@@ -6,6 +6,10 @@ const faceWidth = 200;
 
 const video = document.getElementById('video');
 
+const constraints = {
+    video: true
+};
+
 navigator.getMedia = (
     navigator.getUserMedia ||
     navigator.webkitGetUserMedia ||
@@ -21,10 +25,8 @@ Promise.all([
 ]).then(startVideo());
 
 function startVideo() {
-    navigator.getUserMedia(
-        { video: {} },
-        stream => video.srcObject = stream,
-        err => {console.log(err)})
+    navigator.mediaDevices.getUserMedia(constraints).
+    then((stream) => {video.srcObject = stream});
 }
 
 video.addEventListener('play', () => {
