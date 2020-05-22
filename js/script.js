@@ -2,6 +2,9 @@
 let imagePositioningParams = undefined;
 // --------- INITIALIZATION ------------
 $(document).ready(() => {
+    // set carousel content to fixed size because reasons.
+    $('.carousel-item').css('height', $(`#myCarousel .active img`).height());
+
     //protect image copying
     $('#myCarousel').on('contextmenu', 'img', function(e){
         return false;
@@ -10,10 +13,15 @@ $(document).ready(() => {
     window.onresize = updateCanvas;
     window.onload = updateCanvas;
     // restart video on slide change to retrigger video play listener.
-    $('.carousel-control-next, .carousel-control-prev').on('click', () => {
-        video.pause();
-        video.play();
-    });
+    $('.carousel-control-next, .carousel-control-prev').on('click', function(){
+        setTimeout(() => {
+            video.pause();
+            video.play();
+            // set carousel content to fixed size because reasons.
+            $('.carousel-item').css('height', $(`#myCarousel .active img`).height());
+            // remove all canvases
+            $('#myCarousel .carousel-caption canvas').remove();
+        }, 500)});
     // load configuration
     $.getScript( "js/configuration.js", function( data, textStatus, jqxhr ) {
         imagePositioningParams = getImagePositioningParams();
@@ -47,13 +55,9 @@ function getActiveImageInfo() {
     return {activeImage, imageName};
 }
 
-// --------------- LOGIC ----------------
-function updateCanvas(canvasInstance) {
-    let {activeImage, imageName} = getActiveImageInfo();
-
-    // cleanup inactive canvases
-    let canvasParameters = imagePositioningParams[imageName];
-    $('#myCarousel .carousel-caption canvas').each(function() {
+function removeUnusedCanvases(canvasParameters) {
+    let realCanvases = $('#myCarousel .carousel-caption canvas');
+    realCanvases.each(function () {
         let found = false;
         for (let canvasInstance of canvasParameters) {
             if ($(this).attr('id') === canvasInstance.id) {
@@ -64,13 +68,18 @@ function updateCanvas(canvasInstance) {
             $(this).remove();
         }
     });
+}
+
+// --------------- LOGIC ----------------
+function updateCanvas(canvasInstance) {
+    let {activeImage, imageName} = getActiveImageInfo();
+
+    // cleanup inactive canvases
+    removeUnusedCanvases(imagePositioningParams[imageName]);
 
     // ratio when responsively resizing image. adapt canvas as well
     const RATIO_RESIZE_WIDTH = activeImage.width() / activeImage.prop('naturalWidth');
     const RATIO_RESIZE_HEIGHT = activeImage.height() / activeImage.prop('naturalHeight');
-
-    // set carousel content to fixed size because reasons.
-    $('.carousel-item').css('height', activeImage.height());
 
     // on bigger screens caption is bigger then the image. calculate this difference to give canvas appropriate margin left.
     carouselCaptionToImageDiff = $(`#myCarousel .active .carousel-caption`).width() - activeImage.width();
@@ -142,6 +151,6 @@ function videoPayEvent() {
             }
         }
 
-    }, 500);
+    }, 300);
 
 };
