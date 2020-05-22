@@ -5,7 +5,7 @@ const faceHeight = 200;
 const faceWidth = 200;
 
 //TODO: export in separate file?
-const imagePositioningParams = [
+let imagePositioningParams = [
     {
         imageName: 'r_01.png',
         canvasInstances: [
