@@ -1,52 +1,5 @@
 // --------- CONFIGURABLE PARAMETERS ------------
-let facePositionTopOffset = 290;
-let facePositionLeftOffset = 320;
-const faceHeight = 200;
-const faceWidth = 200;
-
-//TODO: export in separate file?
-let imagePositioningParams = [
-    {
-        imageName: 'r_01.png',
-        canvasInstances: [
-            {
-                facePositionTopOffset : 290,
-                facePositionLeftOffset: 320,
-                ratio: 1.15,
-                faceHeight: 200,
-                faceWidth: 200,
-                zIndex: -1,
-                id: 'canvas1',
-                filter: 'grayscale(100%) sepia(30%)',
-                boxXOffset: - 70,
-                boxYOffset: -70,
-                boxXWidth: 100,
-                boxYWidth: 100,
-                //do not edit below
-                actualVideoHeight: 200,
-                actualVideoWidth: 200
-            },
-            {
-                facePositionTopOffset : 390,
-                facePositionLeftOffset: 420,
-                ratio: 0.25,
-                faceHeight: 200,
-                faceWidth: 200,
-                zIndex: -2,
-                id: 'canvas2',
-                filter: 'grayscale(100%) sepia(30%)',
-                boxXOffset: - 70,
-                boxYOffset: -70,
-                boxXWidth: 100,
-                boxYWidth: 100,
-                //do not edit below
-                actualVideoHeight: 200,
-                actualVideoWidth: 200
-            }
-        ]
-    }
-];
-
+let imagePositioningParams = undefined;
 // --------- INITIALIZATION ------------
 $(document).ready(() => {
     //protect image copying
@@ -56,6 +9,15 @@ $(document).ready(() => {
     // update canvas on browser changes.
     window.onresize = updateCanvas;
     window.onload = updateCanvas;
+    // restart video on slide change to retrigger video play listener.
+    $('.carousel-control-next, .carousel-control-prev').on('click', () => {
+        video.pause();
+        video.play();
+    });
+    // load configuration
+    $.getScript( "js/configuration.js", function( data, textStatus, jqxhr ) {
+        imagePositioningParams = getImagePositioningParams();
+    });
 });
 const video = document.getElementById('video');
 const constraints = {
@@ -65,13 +27,7 @@ let displaySize = {
     width: window.innerWidth,
     height: window.innerHeight
 };
-let canvas = undefined;
-let canvas2 = undefined;
 let carouselCaptionToImageDiff = undefined; // offset for canvas between image and actual container on bigger resolutions.
-let actualVideoHeight = faceHeight;
-let actualVideoWidth = faceWidth;
-let actualVideoHeight2 = faceHeight;
-let actualVideoWidth2 = faceWidth;
 
 Promise.all([
     faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
@@ -85,14 +41,33 @@ function startVideo() {
     then((stream) => {video.srcObject = stream});
 }
 
-// --------------- LOGIC ----------------
-function updateCanvas() {
+function getActiveImageInfo() {
     let activeImage = $(`#myCarousel .active img`);
-    let imageName = activeImage.attr('src').replace('img/','');
+    let imageName = activeImage.attr('src').replace('img/', '').replace('.png', '');
+    return {activeImage, imageName};
+}
+
+// --------------- LOGIC ----------------
+function updateCanvas(canvasInstance) {
+    let {activeImage, imageName} = getActiveImageInfo();
+
+    // cleanup inactive canvases
+    let canvasParameters = imagePositioningParams[imageName];
+    $('#myCarousel .carousel-caption canvas').each(function() {
+        let found = false;
+        for (let canvasInstance of canvasParameters) {
+            if ($(this).attr('id') === canvasInstance.id) {
+                found = true;
+            }
+        }
+        if (!found) {
+            $(this).remove();
+        }
+    });
 
     // ratio when responsively resizing image. adapt canvas as well
-    let ratioResizeWidth = activeImage.width() / activeImage.prop('naturalWidth');
-    let rationResizeHeight = activeImage.height() / activeImage.prop('naturalHeight');
+    const RATIO_RESIZE_WIDTH = activeImage.width() / activeImage.prop('naturalWidth');
+    const RATIO_RESIZE_HEIGHT = activeImage.height() / activeImage.prop('naturalHeight');
 
     // set carousel content to fixed size because reasons.
     $('.carousel-item').css('height', activeImage.height());
@@ -101,94 +76,72 @@ function updateCanvas() {
     carouselCaptionToImageDiff = $(`#myCarousel .active .carousel-caption`).width() - activeImage.width();
 
     // ----------- Get Canvases -------------
-    actualVideoWidth *= ratioResizeWidth;
-    actualVideoHeight *= rationResizeHeight;
+    canvasInstance.actualVideoWidth *= RATIO_RESIZE_WIDTH;
+    canvasInstance.actualVideoHeight *= RATIO_RESIZE_HEIGHT;
     displaySize = {
-        width: actualVideoWidth,
-        height: actualVideoHeight
+        width: canvasInstance.actualVideoWidth,
+        height: canvasInstance.actualVideoHeight
     };
-    faceapi.matchDimensions(canvas, displaySize);
+    if (canvasInstance.canvas) {
+        faceapi.matchDimensions(canvasInstance.canvas, displaySize);
+    }
 
-    $(`#myCarousel .active #canvas1`).css({
-        left: carouselCaptionToImageDiff/2 + facePositionLeftOffset * ratioResizeWidth,
-        right: (activeImage.width() - actualVideoWidth), // automatically calculated margin to the right for responsiveness
-        top: facePositionTopOffset * rationResizeHeight
-    });
-
-    // ----------
-    actualVideoWidth2 *= ratioResizeWidth;
-    actualVideoHeight2 *= rationResizeHeight;
-    displaySize = {
-        width: actualVideoWidth2,
-        height: actualVideoHeight2
-    };
-    faceapi.matchDimensions(canvas2, displaySize);
-
-    $(`#myCarousel .active #canvas2`).css({
-        left: carouselCaptionToImageDiff/2 + facePositionLeftOffset * ratioResizeWidth,
-        right: (activeImage.width() - actualVideoWidth2), // automatically calculated margin to the right for responsiveness
-        top: facePositionTopOffset * rationResizeHeight
+    $(`#myCarousel .active #${canvasInstance.id}`).css({
+        left: carouselCaptionToImageDiff/2 + canvasInstance.facePositionLeftOffset * RATIO_RESIZE_WIDTH,
+        right: (activeImage.width() - canvasInstance.actualVideoWidth), // automatically calculated margin to the right for responsiveness
+        top: canvasInstance.facePositionTopOffset * RATIO_RESIZE_HEIGHT
     });
 };
 
-video.addEventListener('play', () => {
-    canvas = faceapi.createCanvasFromMedia(video);
-    canvas.setAttribute('style', `z-index: 1; filter: grayscale(100%) sepia(30%); max-width:100%; height: auto;`);
-    canvas.setAttribute('id', 'canvas1');
+video.addEventListener('play', function(){setTimeout(videoPayEvent, 1000)});
 
-    canvas2 = faceapi.createCanvasFromMedia(video);
-    canvas2.setAttribute('style', `z-index: 2; filter: grayscale(100%) sepia(30%); max-width:100%; height: auto;`);
-    canvas2.setAttribute('id', 'canvas2');
+function videoPayEvent() {
+    let {activeImage, imageName} = getActiveImageInfo();
+    console.log('active image'+ imageName);
+    // remove all other canvases
+
+    let canvasParameters = imagePositioningParams[imageName];
+    for (let canvasInstance of canvasParameters) {
+        canvasInstance.canvas = faceapi.createCanvasFromMedia(video);
+        canvasInstance.canvas.setAttribute('style', `z-index: ${canvasInstance.zIndex}; filter: ${canvasInstance.filter}; max-width:100%; height: auto;`);
+        canvasInstance.canvas.setAttribute('id', canvasInstance.id);
+    }
 
     setInterval(async () => {
         const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
 
         if (detections[0]) {
-            $(`#myCarousel .active .carousel-caption`).append(canvas);
-            $(`#myCarousel .active .carousel-caption`).append(canvas2);
-
             let alignedRect = detections[0].alignedRect;
-            const ratioHeight = faceHeight / alignedRect.box.height;
-            const ratioWidth = faceWidth / alignedRect.box.width;
+            for (let canvasInstance of canvasParameters) {
+                let carouselContainer = $(`#myCarousel .active .carousel-caption`);
+                carouselContainer.find(`#${canvasInstance.canvas.id}`).remove(); //remove old canvas;
+                carouselContainer.append(canvasInstance.canvas);
 
-            actualVideoHeight = alignedRect.box.height * ratioHeight * 1.15;
-            actualVideoWidth = alignedRect.box.width * ratioWidth * 1.15;
-            actualVideoHeight2 = alignedRect.box.height * ratioHeight * 0.25;
-            actualVideoWidth2 = alignedRect.box.width * ratioWidth * 0.25;
+                const RATIO_HEIGHT = canvasInstance.faceHeight / alignedRect.box.height;
+                const RATIO_WIDTH = canvasInstance.faceWidth / alignedRect.box.width;
 
-            updateCanvas();
+                canvasInstance.actualVideoHeight = alignedRect.box.height * RATIO_HEIGHT * canvasInstance.ratio;
+                canvasInstance.actualVideoWidth = alignedRect.box.width * RATIO_WIDTH * canvasInstance.ratio;
 
-            let context = canvas.getContext('2d');
-            let context2 = canvas2.getContext('2d');
-            // The first 2 are the direction and scale of the x axis in pixels.
-            // By default it is 1,0. The next two are the direction and scale of the y axis.
-            // By default it is 0,1. The last two are the origin. Where on the canvas something will be drawn if you draw at 0,0. By default it is at 0,0 top left.
-            context.setTransform(-1,0,0,1, canvas.width, 0);
-            context.drawImage(video,
-                alignedRect.box.x - 70,
-                alignedRect.box.y - 70,
-                alignedRect.box.width + 100,
-                alignedRect.box.height + 100,
-                0,
-                0,
-                actualVideoWidth,
-                actualVideoHeight);
+                updateCanvas(canvasInstance);
 
-            context2.setTransform(-1,0,0,1, canvas2.width, 0);
-            context2.drawImage(video,
-                alignedRect.box.x - 70,
-                alignedRect.box.y - 70,
-                alignedRect.box.width + 100,
-                alignedRect.box.height + 100,
-                0,
-                0,
-                actualVideoWidth2,
-                actualVideoHeight2);
+                let context = canvasInstance.canvas.getContext('2d');
+                // The first 2 are the direction and scale of the x axis in pixels.
+                // By default it is 1,0. The next two are the direction and scale of the y axis.
+                // By default it is 0,1. The last two are the origin. Where on the canvas something will be drawn if you draw at 0,0. By default it is at 0,0 top left.
+                context.setTransform(canvasInstance.inverseMirror ? 1 : -1, 0, 0, 1, canvasInstance.inverseMirror ? 0 : canvasInstance.canvas.width, 0);
+                context.drawImage(video,
+                    alignedRect.box.x + canvasInstance.boxXOffset,
+                    alignedRect.box.y + canvasInstance.boxYOffset,
+                    alignedRect.box.width + canvasInstance.boxWidthOffset,
+                    alignedRect.box.height + canvasInstance.boxHeightOffset,
+                    0,
+                    0,
+                    canvasInstance.actualVideoWidth,
+                    canvasInstance.actualVideoHeight);
+            }
         }
 
-    }, 100);
+    }, 500);
 
-    // --------------------------------------------------
-
-
-});
+};
