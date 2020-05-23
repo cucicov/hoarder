@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ea2be0a-0e36-432d-8b0a-fe77a709a71f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/f1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/f2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/f3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/f4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/f6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/f7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/f8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/f9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jquery.hbaLoadImages.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face-api.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/face-api.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery-3.5.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/jquery-3.5.1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-camera.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-camera.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +34,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="package.json" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -98,7 +113,7 @@
       <workItem from="1588790938555" duration="78784000" />
       <workItem from="1590009259988" duration="35557000" />
       <workItem from="1590143517132" duration="9112000" />
-      <workItem from="1590168663446" duration="3657000" />
+      <workItem from="1590168663446" duration="9807000" />
     </task>
     <servers />
   </component>

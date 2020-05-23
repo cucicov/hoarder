@@ -3,7 +3,9 @@ let imagePositioningParams = undefined;
 // --------- INITIALIZATION ------------
 $(document).ready(() => {
     // set carousel content to fixed size because reasons.
-    $('.carousel-item').css('height', $(`#myCarousel .active img`).height());
+    $(`#myCarousel .active img`).one('load', () => {
+        $('.carousel-item').css('height', $(this).height());
+    });
 
     //protect image copying
     $('#myCarousel').on('contextmenu', 'img', function(e){
@@ -26,6 +28,14 @@ $(document).ready(() => {
     $.getScript( "js/configuration.js", function( data, textStatus, jqxhr ) {
         imagePositioningParams = getImagePositioningParams();
     });
+    // async image loading
+    $('.carousel-inner').hbaLoadImages({
+        attribute:'data-src',
+        onSuccess:function(source, element) {
+            element.src = source;
+        }
+    });
+
 });
 const video = document.getElementById('video');
 const constraints = {
