@@ -2,42 +2,45 @@
 let imagePositioningParams = undefined;
 // --------- INITIALIZATION ------------
 $(document).ready(() => {
+    // initialize first canvas
+    drawCanvases();
     // set carousel content to fixed size because reasons.
     $(`#myCarousel .active img`).one('load', () => {
         $('.carousel-item').css('height', $(this).height());
     });
 
     //protect image copying
-    $('#myCarousel').on('contextmenu', 'img', function(e){
+    $('#myCarousel').on('contextmenu', 'img', function (e) {
         return false;
     });
     // update canvas on browser changes.
     window.onresize = updateCanvas;
     window.onload = updateCanvas;
     // restart video on slide change to retrigger video play listener.
-    $('.carousel-control-next, .carousel-control-prev').on('click', function(){
+    $('.carousel-control-next, .carousel-control-prev').on('click', function () {
         setTimeout(() => {
-            video.pause();
-            video.play();
+            drawCanvases();
             // set carousel content to fixed size because reasons.
             $('.carousel-item').css('height', $(`#myCarousel .active img`).height());
             // remove all canvases
             $('#myCarousel .carousel-caption canvas').remove();
-        }, 500)});
+        }, 800)
+    });
     // load configuration
-    $.getScript( "js/configuration.js", function( data, textStatus, jqxhr ) {
+    $.getScript("js/configuration.js", function (data, textStatus, jqxhr) {
         imagePositioningParams = getImagePositioningParams();
     });
     // async image loading
     $('.carousel-inner').hbaLoadImages({
-        attribute:'data-src',
-        onSuccess:function(source, element) {
+        attribute: 'data-src',
+        onSuccess: function (source, element) {
             element.src = source;
         }
     });
 
 });
 const video = document.getElementById('video');
+let alignedRect = undefined;
 const constraints = {
     video: true
 };
@@ -55,8 +58,9 @@ Promise.all([
 ]).then(startVideo());
 
 function startVideo() {
-    navigator.mediaDevices.getUserMedia(constraints).
-    then((stream) => {video.srcObject = stream});
+    navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+        video.srcObject = stream
+    });
 }
 
 function getActiveImageInfo() {
@@ -106,31 +110,40 @@ function updateCanvas(canvasInstance) {
     }
 
     $(`#myCarousel .active #${canvasInstance.id}`).css({
-        left: carouselCaptionToImageDiff/2 + canvasInstance.facePositionLeftOffset * RATIO_RESIZE_WIDTH,
+        left: carouselCaptionToImageDiff / 2 + canvasInstance.facePositionLeftOffset * RATIO_RESIZE_WIDTH,
         right: (activeImage.width() - canvasInstance.actualVideoWidth), // automatically calculated margin to the right for responsiveness
         top: canvasInstance.facePositionTopOffset * RATIO_RESIZE_HEIGHT
     });
 };
 
-video.addEventListener('play', function(){setTimeout(videoPayEvent, 1000)});
+video.addEventListener('play', function () {
+    setTimeout(videoPayEvent, 1000)
+});
 
 function videoPayEvent() {
-    let {activeImage, imageName} = getActiveImageInfo();
-    console.log('active image'+ imageName);
-    // remove all other canvases
-
-    let canvasParameters = imagePositioningParams[imageName];
-    for (let canvasInstance of canvasParameters) {
-        canvasInstance.canvas = faceapi.createCanvasFromMedia(video);
-        canvasInstance.canvas.setAttribute('style', `z-index: ${canvasInstance.zIndex}; filter: ${canvasInstance.filter}; max-width:100%; height: auto;`);
-        canvasInstance.canvas.setAttribute('id', canvasInstance.id);
-    }
-
     setInterval(async () => {
-        const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
+        const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks();
 
         if (detections[0]) {
-            let alignedRect = detections[0].alignedRect;
+            alignedRect = detections[0].alignedRect;
+        }
+
+    }, 1000);
+};
+
+
+function drawCanvases() {
+    setInterval(async () => {
+        let {activeImage, imageName} = getActiveImageInfo();
+
+        let canvasParameters = imagePositioningParams[imageName];
+        for (let canvasInstance of canvasParameters) {
+            canvasInstance.canvas = faceapi.createCanvasFromMedia(video);
+            canvasInstance.canvas.setAttribute('style', `z-index: ${canvasInstance.zIndex}; filter: ${canvasInstance.filter}; max-width:100%; height: auto;`);
+            canvasInstance.canvas.setAttribute('id', canvasInstance.id);
+        }
+
+        if (alignedRect) {
             for (let canvasInstance of canvasParameters) {
                 let carouselContainer = $(`#myCarousel .active .carousel-caption`);
                 carouselContainer.find(`#${canvasInstance.canvas.id}`).remove(); //remove old canvas;
@@ -161,6 +174,6 @@ function videoPayEvent() {
             }
         }
 
-    }, 300);
+    }, 100);
+}
 
-};

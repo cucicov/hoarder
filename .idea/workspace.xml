@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ea2be0a-0e36-432d-8b0a-fe77a709a71f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/f1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/f2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/f3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/f4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/f6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/f7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/f8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/f9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/jquery.hbaLoadImages.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/face-api.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/face-api.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jquery-3.5.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/jquery-3.5.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/configuration.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/configuration.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-camera.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-camera.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +98,7 @@
       <workItem from="1588790938555" duration="78784000" />
       <workItem from="1590009259988" duration="35557000" />
       <workItem from="1590143517132" duration="9112000" />
-      <workItem from="1590168663446" duration="9807000" />
+      <workItem from="1590168663446" duration="13122000" />
     </task>
     <servers />
   </component>
@@ -355,6 +340,10 @@
       <screen x="1280" y="-476" width="1920" height="1057" />
     </state>
     <state x="1380" y="-376" width="1720" height="857" key="dock-window-9/1280.-476.1920.1057/0.23.1280.777@1280.-476.1920.1057" timestamp="1589405870601" />
+    <state x="2338" y="-305" width="837" height="777" key="find.popup" timestamp="1590235204805">
+      <screen x="1280" y="-476" width="1920" height="1057" />
+    </state>
+    <state x="2338" y="-305" width="837" height="777" key="find.popup/1280.-476.1920.1057/0.23.1280.777@1280.-476.1920.1057" timestamp="1590235204805" />
     <state x="1905" y="6" key="run.anything.popup" timestamp="1589032969258">
       <screen x="1280" y="-476" width="1920" height="1057" />
     </state>
