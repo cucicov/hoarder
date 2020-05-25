@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/cucicov/hoarder/issues"
   },
-  "homepage": "https://github.com/cucicov/hoarder#readme"
+  "homepage": "https://github.com/cucicov/hoarder#readme",
+  "dependencies": {
+    "heroku-ssl-redirect": "0.0.4",
+    "require": "^2.4.20"
+  }
 }
