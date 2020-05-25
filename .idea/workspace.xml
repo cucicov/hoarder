@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ea2be0a-0e36-432d-8b0a-fe77a709a71f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/album1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/configuration_firstPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/configuration.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/configuration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +74,7 @@
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.testWebcam.html">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/hoarder_v1/index.html" useBuiltInWebServerPort="true">
+    <configuration name="album1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/hoarder_v1/album1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="testWebcam.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/hoarder_v1/testWebcam.html" useBuiltInWebServerPort="true">
@@ -81,7 +83,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.testWebcam.html" />
-        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.album1.html" />
       </list>
     </recent_temporary>
   </component>
@@ -98,7 +100,9 @@
       <workItem from="1588790938555" duration="78784000" />
       <workItem from="1590009259988" duration="35557000" />
       <workItem from="1590143517132" duration="9112000" />
-      <workItem from="1590168663446" duration="13122000" />
+      <workItem from="1590168663446" duration="25409000" />
+      <workItem from="1590353019693" duration="19000" />
+      <workItem from="1590437279395" duration="2902000" />
     </task>
     <servers />
   </component>
@@ -203,10 +207,10 @@
       <screen x="1280" y="-476" width="1920" height="1057" />
     </state>
     <state x="1380" y="-376" width="1720" height="857" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.23.1280.777/1280.-476.1920.1057@1280.-476.1920.1057" timestamp="1589489211608" />
-    <state x="1898" y="-326" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590078812252">
+    <state x="1898" y="-326" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590247156230">
       <screen x="1280" y="-476" width="1920" height="1057" />
     </state>
-    <state x="1898" y="-326" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1280.-476.1920.1057/0.23.1280.777@1280.-476.1920.1057" timestamp="1590078812252" />
+    <state x="1898" y="-326" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1280.-476.1920.1057/0.23.1280.777@1280.-476.1920.1057" timestamp="1590247156230" />
     <state x="2028" y="-29" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590079367378">
       <screen x="1280" y="-476" width="1920" height="1057" />
     </state>
