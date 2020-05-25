@@ -51,8 +51,7 @@ $(document).ready(() => {
     // load local configuration
     localConfiguration = configurationMappings[$('main').attr('id')];
     // block camera only on first page after the user is prompted the disclaimer.
-    // on mobile devices to no turn on camera.
-    if (localConfiguration.container !== '.card-columns' && !isMobile) {
+    if (localConfiguration.container !== '.card-columns') {
         isAllModalsHidden = true;
     }
     //protect image copying
@@ -113,7 +112,8 @@ Promise.all([
 ]).then(startVideo());
 
 function startVideo() {
-    if (isAllModalsHidden && !videoStarted) {
+    //don't start camera for mobile devices.
+    if (isAllModalsHidden && !videoStarted && !isMobile) {
         navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
             video.srcObject = stream
         });
