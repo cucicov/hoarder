@@ -15,10 +15,33 @@ let configurationMappings = {
         container: "#myCarousel"
     }
 };
+
+function checkIsMobile() {
+    if ("maxTouchPoints" in navigator) {
+        isMobile = navigator.maxTouchPoints > 0;
+    } else if ("msMaxTouchPoints" in navigator) {
+        isMobile = navigator.msMaxTouchPoints > 0;
+    } else {
+        let mQ = window.matchMedia && matchMedia("(pointer:coarse)");
+        if (mQ && mQ.media === "(pointer:coarse)") {
+            isMobile = !!mQ.matches;
+        } else if ('orientation' in window) {
+            isMobile = true; // deprecated, but good fallback
+        } else {
+            // Only as a last resort, fall back to user agent sniffing
+            let UA = navigator.userAgent;
+            isMobile = (
+                /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
+                /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
+            );
+        }
+    }
+}
+
 // --------- INITIALIZATION ------------
 $(document).ready(() => {
     // check for mobile device
-    isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+    isMobile = checkIsMobile();
     // resize content for first image
     setTimeout(() => {
         // set carousel content to fixed size because reasons.
