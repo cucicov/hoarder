@@ -42,7 +42,6 @@ function checkIsMobile() {
 $(document).ready(() => {
     // check for mobile device
     checkIsMobile();
-    alert(isMobile);
     // resize content for first image
     setTimeout(() => {
         // set carousel content to fixed size because reasons.
