@@ -18,9 +18,7 @@ let configurationMappings = {
 // --------- INITIALIZATION ------------
 $(document).ready(() => {
     // check for mobile device
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        isMobile = true;
-    }
+    isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
     // resize content for first image
     setTimeout(() => {
         // set carousel content to fixed size because reasons.
