@@ -1,6 +1,6 @@
 function getImagePositioningParams() {
     return {
-        f1: [
+        r_24: [
             {
                 facePositionTopOffset: 100,
                 facePositionLeftOffset: 100,
@@ -10,6 +10,7 @@ function getImagePositioningParams() {
                 zIndex: 1,
                 id: 'canvas1',
                 filter: 'grayscale(100%) sepia(20%)',
+                rotate: 'rotate(20deg);',
                 inverseMirror: false,
                 boxXOffset: -60,
                 boxYOffset: -60,

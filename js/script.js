@@ -152,18 +152,20 @@ function getActiveImageInfo() {
 }
 
 function removeUnusedCanvases(canvasParameters) {
-    let realCanvases = $(`${localConfiguration.container} canvas`);
-    realCanvases.each(function () {
-        let found = false;
-        for (let canvasInstance of canvasParameters) {
-            if ($(this).attr('id') === canvasInstance.id) {
-                found = true;
+    if (canvasParameters !== undefined) {
+        let realCanvases = $(`${localConfiguration.container} canvas`);
+        realCanvases.each(function () {
+            let found = false;
+            for (let canvasInstance of canvasParameters) {
+                if ($(this).attr('id') === canvasInstance.id) {
+                    found = true;
+                }
             }
-        }
-        if (!found) {
-            $(this).remove();
-        }
-    });
+            if (!found) {
+                $(this).remove();
+            }
+        });
+    }
 }
 
 // --------------- LOGIC ----------------
@@ -171,7 +173,7 @@ function updateCanvas(canvasInstance) {
     let {activeImage, imageName} = getActiveImageInfo();
 
     // cleanup inactive canvases
-    removeUnusedCanvases(imagePositioningParams[imageName]);
+    removeUnusedCanvases(getCanvasParameters(imageName));
 
     // ratio when responsively resizing image. adapt canvas as well
     let canvasElement = `${localConfiguration.container} #${canvasInstance.id}`;
@@ -218,9 +220,16 @@ function videoPayEvent() {
             alignedRect = detections[0].alignedRect;
         }
 
-    }, 1000);
+    }, 500);
 };
 
+
+function getCanvasParameters(imageName) {
+    if (imagePositioningParams === undefined) {
+        return undefined;
+    }
+    return imagePositioningParams.hasOwnProperty(imageName) ? imagePositioningParams[imageName] : undefined;
+}
 
 function drawCanvases() {
     setInterval(async () => {
@@ -230,44 +239,48 @@ function drawCanvases() {
             startVideo();
             let {activeImage, imageName} = getActiveImageInfo();
 
-            let canvasParameters = imagePositioningParams[imageName];
-            for (let canvasInstance of canvasParameters) {
-                canvasInstance.canvas = faceapi.createCanvasFromMedia(video);
-                canvasInstance.canvas.setAttribute('style', `z-index: ${canvasInstance.zIndex}; filter: ${canvasInstance.filter}; max-width:100%; height: auto;`);
-                canvasInstance.canvas.setAttribute('id', canvasInstance.id);
-            }
-
-            if (alignedRect) {
+            let canvasParameters = getCanvasParameters(imageName);
+            if (canvasParameters !== undefined && video.readyState === 4) {
                 for (let canvasInstance of canvasParameters) {
-                    let carouselContainer = $(`${localConfiguration.container} .active .carousel-caption`);
-                    if (!carouselContainer.length) { // if first page - there is no carousel so place directly in container.
-                        carouselContainer = $(localConfiguration.container);
+                    canvasInstance.canvas = faceapi.createCanvasFromMedia(video);
+                    let rotateParameter = canvasInstance.rotate === undefined ? '' : canvasInstance.rotate;
+                    canvasInstance.canvas.setAttribute('style', `z-index: ${canvasInstance.zIndex}; 
+                        filter: ${canvasInstance.filter}; max-width:100%; height: auto; transform: ${rotateParameter}`);
+                    canvasInstance.canvas.setAttribute('id', canvasInstance.id);
+                }
+
+                if (alignedRect) {
+                    for (let canvasInstance of canvasParameters) {
+                        let carouselContainer = $(`${localConfiguration.container} .active .carousel-caption`);
+                        if (!carouselContainer.length) { // if first page - there is no carousel so place directly in container.
+                            carouselContainer = $(localConfiguration.container);
+                        }
+                        carouselContainer.find(`#${canvasInstance.canvas.id}`).remove(); //remove old canvas;
+                        carouselContainer.append(canvasInstance.canvas);
+
+                        const RATIO_HEIGHT = canvasInstance.faceHeight / alignedRect.box.height;
+                        const RATIO_WIDTH = canvasInstance.faceWidth / alignedRect.box.width;
+
+                        canvasInstance.actualVideoHeight = alignedRect.box.height * RATIO_HEIGHT * canvasInstance.ratio;
+                        canvasInstance.actualVideoWidth = alignedRect.box.width * RATIO_WIDTH * canvasInstance.ratio;
+
+                        updateCanvas(canvasInstance);
+
+                        let context = canvasInstance.canvas.getContext('2d');
+                        // The first 2 are the direction and scale of the x axis in pixels.
+                        // By default it is 1,0. The next two are the direction and scale of the y axis.
+                        // By default it is 0,1. The last two are the origin. Where on the canvas something will be drawn if you draw at 0,0. By default it is at 0,0 top left.
+                        context.setTransform(canvasInstance.inverseMirror ? 1 : -1, 0, 0, 1, canvasInstance.inverseMirror ? 0 : canvasInstance.canvas.width, 0);
+                        context.drawImage(video,
+                            alignedRect.box.x + canvasInstance.boxXOffset,
+                            alignedRect.box.y + canvasInstance.boxYOffset,
+                            alignedRect.box.width + canvasInstance.boxWidthOffset,
+                            alignedRect.box.height + canvasInstance.boxHeightOffset,
+                            0,
+                            0,
+                            canvasInstance.actualVideoWidth,
+                            canvasInstance.actualVideoHeight);
                     }
-                    carouselContainer.find(`#${canvasInstance.canvas.id}`).remove(); //remove old canvas;
-                    carouselContainer.append(canvasInstance.canvas);
-
-                    const RATIO_HEIGHT = canvasInstance.faceHeight / alignedRect.box.height;
-                    const RATIO_WIDTH = canvasInstance.faceWidth / alignedRect.box.width;
-
-                    canvasInstance.actualVideoHeight = alignedRect.box.height * RATIO_HEIGHT * canvasInstance.ratio;
-                    canvasInstance.actualVideoWidth = alignedRect.box.width * RATIO_WIDTH * canvasInstance.ratio;
-
-                    updateCanvas(canvasInstance);
-
-                    let context = canvasInstance.canvas.getContext('2d');
-                    // The first 2 are the direction and scale of the x axis in pixels.
-                    // By default it is 1,0. The next two are the direction and scale of the y axis.
-                    // By default it is 0,1. The last two are the origin. Where on the canvas something will be drawn if you draw at 0,0. By default it is at 0,0 top left.
-                    context.setTransform(canvasInstance.inverseMirror ? 1 : -1, 0, 0, 1, canvasInstance.inverseMirror ? 0 : canvasInstance.canvas.width, 0);
-                    context.drawImage(video,
-                        alignedRect.box.x + canvasInstance.boxXOffset,
-                        alignedRect.box.y + canvasInstance.boxYOffset,
-                        alignedRect.box.width + canvasInstance.boxWidthOffset,
-                        alignedRect.box.height + canvasInstance.boxHeightOffset,
-                        0,
-                        0,
-                        canvasInstance.actualVideoWidth,
-                        canvasInstance.actualVideoHeight);
                 }
             }
         }
