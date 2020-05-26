@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ea2be0a-0e36-432d-8b0a-fe77a709a71f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/5rZ8H.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/alfie.f51946af45e0b561c60f768335c9eb79.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/common.bundle.f9554506a08a1cc2b021f0dfc3f59ebb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/disqusloader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/embed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/highlight.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/lounge.bundle.8dcef1eceffedffe3a64bc7bf0da26c8.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/lounge.db072b7d11b56c5c060394cab39e75c5.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/lounge.load.9e3da5ae8d7caf8389087c4c35a6ca1b.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/noavatar92.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/saved_resource(1).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Https Redirect for Node on Heroku _ Jake Trent_files/saved_resource.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +101,7 @@
       <workItem from="1590143517132" duration="9112000" />
       <workItem from="1590168663446" duration="25409000" />
       <workItem from="1590353019693" duration="19000" />
-      <workItem from="1590437279395" duration="8023000" />
+      <workItem from="1590437279395" duration="8524000" />
     </task>
     <servers />
   </component>
@@ -140,6 +125,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="373" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590517029553">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="373" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.777@0.23.1280.777" timestamp="1590517029553" />
     <state x="1406" y="-342" width="1720" height="857" key="DiffContextDialog" timestamp="1590059780315">
       <screen x="1280" y="-476" width="1920" height="1057" />
     </state>

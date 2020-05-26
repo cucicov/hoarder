@@ -19,5 +19,8 @@
   "dependencies": {
     "heroku-ssl-redirect": "0.0.4",
     "require": "^2.4.20"
+  },
+  "engines": {
+    "node": "12.16.3"
   }
 }
