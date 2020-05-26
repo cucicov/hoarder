@@ -4,9 +4,6 @@ let localConfiguration = undefined;
 let isAllModalsHidden = sessionStorage.getItem('shown-modal'); //first entry should be false. subsequent entries  should be true as modals have already been shown.
 let videoStarted = false;
 let isMobile = false;
-var sslRedirect = require('heroku-ssl-redirect');
-var express = require('express');
-var app = express();
 // mapping for configuration files.
 let configurationMappings = {
     firstPage: {
@@ -43,18 +40,6 @@ function checkIsMobile() {
 
 // --------- INITIALIZATION ------------
 $(document).ready(() => {
-    // redirect to https:
-    // enable ssl redirect
-    app.use((req, res, next) => {
-        if (req.header('x-forwarded-proto') !== 'https')
-            res.redirect(`https://${req.header('host')}${req.url}`)
-        else
-            next()
-    })
-    app.get('/', function(req, res){
-        res.send('hello world');
-    });
-    app.listen(3000);
     // check for mobile device
     checkIsMobile();
     // resize content for first image
