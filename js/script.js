@@ -4,9 +4,9 @@ let localConfiguration = undefined;
 let isAllModalsHidden = sessionStorage.getItem('shown-modal'); //first entry should be false. subsequent entries  should be true as modals have already been shown.
 let videoStarted = false;
 let isMobile = false;
-var sslRedirect = require('heroku-ssl-redirect');
-var express = require('express');
-var app = express();
+// var sslRedirect = require('heroku-ssl-redirect');
+// var express = require('express');
+// var app = express();
 // mapping for configuration files.
 let configurationMappings = {
     firstPage: {
@@ -15,6 +15,22 @@ let configurationMappings = {
     },
     album1: {
         configFile: "js/configuration.js",
+        container: "#myCarousel"
+    },
+    ski:{
+        configFile: "js/configuration_ski.js",
+        container: "#myCarousel"
+    },
+    alb:{
+        configFile: "js/configuration_alb.js",
+        container: "#myCarousel"
+    },
+    fishing:{
+        configFile: "js/configuration_fishing.js",
+        container: "#myCarousel"
+    },
+    album2:{
+        configFile: "js/configuration_album2.js",
         container: "#myCarousel"
     }
 };
@@ -45,11 +61,11 @@ function checkIsMobile() {
 $(document).ready(() => {
     // redirect to https:
     // enable ssl redirect
-    app.use(sslRedirect());
-    app.get('/', function(req, res){
-        res.send('hello world');
-    });
-    app.listen(3000);
+    // app.use(sslRedirect());
+    // app.get('/', function(req, res){
+    //     res.send('hello world');
+    // });
+    // app.listen(3000);
     // check for mobile device
     checkIsMobile();
     // resize content for first image
