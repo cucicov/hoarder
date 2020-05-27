@@ -4947,8 +4947,8 @@ input[type="button"].btn-block {
     -webkit-column-gap: 1.25rem;
     -moz-column-gap: 1.25rem;
     column-gap: 1.25rem;
-    orphans: 1;
-    widows: 1;
+    orphans: 1 !important;
+    widows: 1 !important;
   }
   .card-columns .card {
     display: inline-block;
@@ -5888,7 +5888,6 @@ a.close.disabled {
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  opacity: 0;
   border-radius: 0.25rem;
 }
 
