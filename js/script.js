@@ -56,6 +56,10 @@ function checkIsMobile() {
 
 // --------- INITIALIZATION ------------
 $(document).ready(() => {
+    if (!isAllModalsHidden) {
+        hideLoadingModelPopUp();
+        hideDetectFacePopUp();
+    }
     // check for mobile device
     checkIsMobile();
     // resize content for first image
@@ -129,9 +133,11 @@ Promise.all([
 function startVideo() {
     //don't start camera for mobile devices.
     if (isAllModalsHidden && !videoStarted && !isMobile) {
+        showLoadingModelPopUp();
         navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
             video.srcObject = stream
         });
+        // show warning dialog that face model is loading.
         videoStarted = true;
     }
 }
@@ -212,12 +218,33 @@ video.addEventListener('play', function () {
     setTimeout(videoPayEvent, 1000)
 });
 
+function hideLoadingModelPopUp() {
+    $('#toast-loading').fadeOut();
+}
+
+function showLoadingModelPopUp() {
+    $('#toast-loading').fadeIn();
+}
+
+function hideDetectFacePopUp() {
+    $('#toast-detection').fadeOut();
+}
+
+function showDetectFacePopUp() {
+    $('#toast-detection').fadeIn();
+}
+
+
 function videoPayEvent() {
     setInterval(async () => {
         const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks();
 
         if (detections[0]) {
+            hideLoadingModelPopUp();
+            hideDetectFacePopUp();
             alignedRect = detections[0].alignedRect;
+        } else {
+            showDetectFacePopUp();
         }
 
     }, 800);
