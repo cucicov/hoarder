@@ -179,7 +179,9 @@ function updateCanvas(canvasInstance) {
     let {activeImage, imageName} = getActiveImageInfo();
 
     // cleanup inactive canvases
-    removeUnusedCanvases(getCanvasParameters(imageName));
+    if (localConfiguration.container !== '.card-columns') {
+        removeUnusedCanvases(getCanvasParameters(imageName));
+    }
 
     // ratio when responsively resizing image. adapt canvas as well
     let canvasElement = `${localConfiguration.container} #${canvasInstance.id}`;
