@@ -297,6 +297,7 @@ function drawCanvases() {
                         // The first 2 are the direction and scale of the x axis in pixels.
                         // By default it is 1,0. The next two are the direction and scale of the y axis.
                         // By default it is 0,1. The last two are the origin. Where on the canvas something will be drawn if you draw at 0,0. By default it is at 0,0 top left.
+                        
                         context.setTransform(canvasInstance.inverseMirror ? 1 : -1, 0, 0, 1, canvasInstance.inverseMirror ? 0 : canvasInstance.canvas.width, 0);
                         context.drawImage(video,
                             alignedRect.box.x + canvasInstance.boxXOffset,
