@@ -1220,9 +1220,9 @@ function getImagePositioningParams() {
             },
             {
                 id: 'canvas71',
-                zIndex: 8,
-                facePositionTopOffset: 400,
-                facePositionLeftOffset: 450,
+                zIndex: -8,
+                facePositionTopOffset: 390,
+                facePositionLeftOffset: 435,
                 ratio: 0.05,
                 filter: 'grayscale(100%) sepia(20%)',
                 inverseMirror: false,
@@ -1240,9 +1240,9 @@ function getImagePositioningParams() {
             },
             {
                 id: 'canvas72',
-                zIndex: 9,
+                zIndex: -9,
                 facePositionTopOffset: 390,
-                facePositionLeftOffset: 480,
+                facePositionLeftOffset: 485,
                 ratio: 0.05,
                 filter: 'grayscale(100%) sepia(20%)',
                 inverseMirror: false,
@@ -1260,9 +1260,9 @@ function getImagePositioningParams() {
             },
             {
                 id: 'canvas73',
-                zIndex: 10,
-                facePositionTopOffset: 400,
-                facePositionLeftOffset: 530,
+                zIndex: -10,
+                facePositionTopOffset: 395,
+                facePositionLeftOffset: 535,
                 ratio: 0.05,
                 filter: 'grayscale(100%) sepia(20%)',
                 inverseMirror: false,
@@ -1280,8 +1280,8 @@ function getImagePositioningParams() {
             },
             {
                 id: 'canvas74',
-                zIndex: 11,
-                facePositionTopOffset: 390,
+                zIndex: -11,
+                facePositionTopOffset: 400,
                 facePositionLeftOffset: 560,
                 ratio: 0.05,
                 filter: 'grayscale(100%) sepia(20%)',
@@ -1300,9 +1300,9 @@ function getImagePositioningParams() {
             },
             {
                 id: 'canvas75',
-                zIndex: 12,
-                facePositionTopOffset: 400,
-                facePositionLeftOffset: 610,
+                zIndex: -12,
+                facePositionTopOffset: 395,
+                facePositionLeftOffset: 615,
                 ratio: 0.05,
                 filter: 'grayscale(100%) sepia(20%)',
                 inverseMirror: false,
@@ -1318,33 +1318,234 @@ function getImagePositioningParams() {
                 actualVideoWidth: 200,
                 canvas: undefined
             }
+        ],
+        sp_10: [
+            {
+                id: 'canvas76',
+                zIndex: -1,
+                facePositionTopOffset: 520,
+                facePositionLeftOffset: 355,
+                ratio: 0.30,
+                filter: 'grayscale(100%) sepia(20%)',
+                inverseMirror: false,
+                //---
+                faceHeight: 400,
+                faceWidth: 400,
+                boxXOffset: -240,
+                boxYOffset: -320,
+                boxWidthOffset: 460,
+                boxHeightOffset: 460,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200,
+                canvas: undefined
+            },
+            {
+                id: 'canvas77',
+                zIndex: -2,
+                facePositionTopOffset: 540,
+                facePositionLeftOffset: 580,
+                ratio: 0.30,
+                filter: 'grayscale(100%) sepia(20%)',
+                inverseMirror: false,
+                //---
+                faceHeight: 400,
+                faceWidth: 400,
+                boxXOffset: -240,
+                boxYOffset: -320,
+                boxWidthOffset: 460,
+                boxHeightOffset: 460,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200,
+                canvas: undefined
+            }
+        ],
+        sp_11: [
+            {
+                id: 'canvas78',
+                zIndex: -1,
+                facePositionTopOffset: 120,
+                facePositionLeftOffset: 330,
+                ratio: 0.15,
+                filter: 'grayscale(100%) sepia(100%)',
+                inverseMirror: false,
+                //---
+                faceHeight: 400,
+                faceWidth: 400,
+                boxXOffset: -240,
+                boxYOffset: -320,
+                boxWidthOffset: 460,
+                boxHeightOffset: 460,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200,
+                canvas: undefined
+            },
+            {
+                id: 'canvas79',
+                zIndex: -2,
+                facePositionTopOffset: 430,
+                facePositionLeftOffset: 150,
+                ratio: 0.25,
+                filter: 'grayscale(100%) sepia(40%)',
+                inverseMirror: false,
+                //---
+                faceHeight: 200,
+                faceWidth: 200,
+                boxXOffset: -160,
+                boxYOffset: -160,
+                boxWidthOffset: 230,
+                boxHeightOffset: 230,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200,
+                canvas: undefined
+            },
+            {
+                id: 'canvas80',
+                zIndex: -3,
+                facePositionTopOffset: 435,
+                facePositionLeftOffset: 105,
+                ratio: 0.25,
+                filter: 'grayscale(100%) sepia(40%)',
+                inverseMirror: false,
+                //---
+                faceHeight: 400,
+                faceWidth: 400,
+                boxXOffset: -240,
+                boxYOffset: -320,
+                boxWidthOffset: 460,
+                boxHeightOffset: 460,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200,
+                canvas: undefined
+            },
+            {
+                id: 'canvas81',
+                zIndex: -4,
+                facePositionTopOffset: 475,
+                facePositionLeftOffset: 195,
+                ratio: 0.25,
+                filter: 'grayscale(100%) sepia(40%)',
+                inverseMirror: false,
+                //---
+                faceHeight: 200,
+                faceWidth: 200,
+                boxXOffset: -120,
+                boxYOffset: -160,
+                boxWidthOffset: 230,
+                boxHeightOffset: 230,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200,
+                canvas: undefined
+            },
+            {
+                id: 'canvas82',
+                zIndex: -5,
+                facePositionTopOffset: 405,
+                facePositionLeftOffset: 220,
+                ratio: 0.25,
+                filter: 'grayscale(100%) sepia(40%)',
+                inverseMirror: false,
+                //---
+                faceHeight: 400,
+                faceWidth: 400,
+                boxXOffset: -240,
+                boxYOffset: -320,
+                boxWidthOffset: 460,
+                boxHeightOffset: 460,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200,
+                canvas: undefined
+            },
+            {
+                id: 'canvas83',
+                zIndex: -6,
+                facePositionTopOffset: 500,
+                facePositionLeftOffset: 250,
+                ratio: 0.25,
+                filter: 'grayscale(100%) sepia(40%)',
+                inverseMirror: false,
+                //---
+                faceHeight: 200,
+                faceWidth: 200,
+                boxXOffset: -120,
+                boxYOffset: -160,
+                boxWidthOffset: 230,
+                boxHeightOffset: 230,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200,
+                canvas: undefined
+            }
+        ],
+         sp_12: [
+            {
+                id: 'canvas84',
+                zIndex: 1,
+                facePositionTopOffset: 250,
+                facePositionLeftOffset: 600,
+                ratio: 0.15,
+                filter: 'grayscale(100%) sepia(40%)',
+                inverseMirror: false,
+                //---
+                faceHeight: 200,
+                faceWidth: 200,
+                boxXOffset: -120,
+                boxYOffset: -160,
+                boxWidthOffset: 230,
+                boxHeightOffset: 230,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200,
+                canvas: undefined
+            },
+             {
+                id: 'canvas85',
+                zIndex: 2,
+                facePositionTopOffset: 250,
+                facePositionLeftOffset: 640,
+                ratio: 0.15,
+                filter: 'grayscale(100%) sepia(40%)',
+                inverseMirror: false,
+                //---
+                faceHeight: 200,
+                faceWidth: 200,
+                boxXOffset: -120,
+                boxYOffset: -160,
+                boxWidthOffset: 230,
+                boxHeightOffset: 230,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200,
+                canvas: undefined
+            },
+             {
+                id: 'canvas86',
+                zIndex: 3,
+                facePositionTopOffset: 250,
+                facePositionLeftOffset: 680,
+                ratio: 0.15,
+                filter: 'grayscale(100%) sepia(40%)',
+                inverseMirror: false,
+                //---
+                faceHeight: 200,
+                faceWidth: 200,
+                boxXOffset: -120,
+                boxYOffset: -160,
+                boxWidthOffset: 230,
+                boxHeightOffset: 230,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200,
+                canvas: undefined
+            }
         ]
 
-
-
-        // sp_03: [
-        //     {
-        //         id: 'canvas3',
-        //         zIndex: 1,
-        //         facePositionTopOffset: 250,
-        //         facePositionLeftOffset: 150,
-        //         ratio: 0.65,
-        //         filter: 'grayscale(40%) sepia(30%)',
-        //         inverseMirror: false,
-        //         //---
-        //         faceHeight: 200,
-        //         faceWidth: 200,
-        //         boxXOffset: -60,
-        //         boxYOffset: -80,
-        //         boxWidthOffset: 130,
-        //         boxHeightOffset: 130,
-        //         //do not edit below
-        //         actualVideoHeight: 200,
-        //         actualVideoWidth: 200,
-        //         canvas: undefined
-        //     },
-
-        // ]
        
 
     }
