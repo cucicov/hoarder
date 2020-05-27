@@ -220,7 +220,7 @@ function videoPayEvent() {
             alignedRect = detections[0].alignedRect;
         }
 
-    }, 500);
+    }, 800);
 };
 
 
