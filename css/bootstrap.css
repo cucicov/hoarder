@@ -2575,6 +2575,7 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #54ffaf;
   border-color: #54ffaf;
+  z-Index: 2001;
 }
 
 .btn-primary:hover {
@@ -6538,7 +6539,7 @@ a.close.disabled {
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  background-color: #212529;
+  background-color: #54ffaf;
 }
 
 @media (prefers-reduced-motion: reduce) {

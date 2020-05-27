@@ -195,7 +195,7 @@ function updateCanvas(canvasInstance) {
         canvasElement = `${localConfiguration.container} .active #${canvasInstance.id}`;
         rightMarginForResponsiveness = activeImage.width() - canvasInstance.actualVideoWidth;
     } else {
-        $(`body`).css('height', $(localConfiguration.container).height() + 200); //MEGA HACK. container for first page should be position: absolute to place the camera image, so footer is not position right after this.
+        $(`body`).css('height', $(localConfiguration.container).height() + 300); //MEGA HACK. container for first page should be position: absolute to place the camera image, so footer is not position right after this.
     }
 
     // ----------- Get Canvases -------------
