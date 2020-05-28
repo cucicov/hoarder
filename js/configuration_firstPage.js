@@ -775,7 +775,7 @@ function getImagePositioningParams() {
                 faceHeight: 200,
                 faceWidth: 200,
                 filter: 'grayscale(0%) sepia(30%)',
-                inverseMirror: true,
+                inverseMirror: false,
                 boxXOffset: -60,
                 boxYOffset: -60,
                 boxWidthOffset: 130,
@@ -801,14 +801,14 @@ function getImagePositioningParams() {
                 actualVideoHeight: 200,
                 actualVideoWidth: 200
             }, 
-            {   id: 'canvas45',//r_07 rama barbat fotoliu
-                zIndex: 45,
-                facePositionTopOffset: 2750,
-                facePositionLeftOffset: 160,
+            {   id: 'canvas46',//r_07 rama barbat fotoliu
+                zIndex: -46,
+                facePositionTopOffset: 2975,
+                facePositionLeftOffset: 140,
                 ratio: 0.35,
                 faceHeight: 200,
                 faceWidth: 200,
-                filter: 'grayscale(0%) sepia(30%)',
+                filter: 'grayscale(0%) sepia(0%)',
                 inverseMirror: true,
                 boxXOffset: -60,
                 boxYOffset: -60,
@@ -818,6 +818,127 @@ function getImagePositioningParams() {
                 actualVideoHeight: 200,
                 actualVideoWidth: 200
             }, 
+             {   id: 'canvas47',//r_30 rama cuplu visiniu
+                zIndex: -47,
+                facePositionTopOffset: 3230,
+                facePositionLeftOffset: 150,
+                ratio: 0.20,
+                faceHeight: 200,
+                faceWidth: 200,
+                filter: 'grayscale(0%) sepia(0%)',
+                inverseMirror: false,
+                boxXOffset: -60,
+                boxYOffset: -60,
+                boxWidthOffset: 130,
+                boxHeightOffset: 130,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200
+            }, 
+             {   id: 'canvas48',//r_30_2 rama cuplu visiniu
+                zIndex: -48,
+                facePositionTopOffset: 3250,
+                facePositionLeftOffset: 120,
+                ratio: 0.20,
+                faceHeight: 200,
+                faceWidth: 200,
+                filter: 'grayscale(0%) sepia(0%)',
+                inverseMirror: false,
+                boxXOffset: -60,
+                boxYOffset: -60,
+                boxWidthOffset: 130,
+                boxHeightOffset: 130,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200
+            }, 
+             {   id: 'canvas49',//r_17_1 rama cuplu batran
+                zIndex: -49,
+                facePositionTopOffset: 3210,
+                facePositionLeftOffset: 477,
+                ratio: 0.30,
+                faceHeight: 200,
+                faceWidth: 200,
+                filter: 'grayscale(0%) sepia(0%)',
+                inverseMirror: false,
+                boxXOffset: -60,
+                boxYOffset: -60,
+                boxWidthOffset: 130,
+                boxHeightOffset: 130,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200
+            }, 
+             {   id: 'canvas50',//r_17_2 rama cuplu batran
+                zIndex: -50,
+                facePositionTopOffset: 3200,
+                facePositionLeftOffset: 524,
+                ratio: 0.35,
+                faceHeight: 200,
+                faceWidth: 200,
+                filter: 'grayscale(0%) sepia(0%)',
+                inverseMirror: true,
+                boxXOffset: -60,
+                boxYOffset: -60,
+                boxWidthOffset: 130,
+                boxHeightOffset: 130,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200
+            }, 
+            {   id: 'canvas51',//r_18 mana
+                zIndex: -51,
+                facePositionTopOffset: 3493,
+                facePositionLeftOffset: 544,
+                ratio: 0.15,
+                faceHeight: 200,
+                faceWidth: 200,
+                filter: 'grayscale(0%) sepia(0%)',
+                inverseMirror: false,
+                boxXOffset: -60,
+                boxYOffset: -60,
+                boxWidthOffset: 130,
+                boxHeightOffset: 130,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200
+            }, 
+            {   id: 'canvas52',//r_28_1 femei alb negru mare 
+                zIndex: -53,
+                facePositionTopOffset: 3325,
+                facePositionLeftOffset: 775,
+                ratio: 1.2,
+                faceHeight: 200,
+                faceWidth: 200,
+                filter: 'grayscale(100%) sepia(30%)',
+                inverseMirror: false,
+                boxXOffset: -60,
+                boxYOffset: -60,
+                boxWidthOffset: 130,
+                boxHeightOffset: 130,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200
+            }, 
+            {   id: 'canvas53',//r_28_2 femei alb negru mic 
+                zIndex: -52,
+                facePositionTopOffset: 3550,
+                facePositionLeftOffset: 847,
+                ratio: 0.75,
+                faceHeight: 200,
+                faceWidth: 200,
+                filter: 'grayscale(100%) sepia(60%)',
+                inverseMirror: true,
+                boxXOffset: -60,
+                boxYOffset: -60,
+                boxWidthOffset: 130,
+                boxHeightOffset: 130,
+                //do not edit below
+                actualVideoHeight: 200,
+                actualVideoWidth: 200
+            }, 
+
+
 
 
 
