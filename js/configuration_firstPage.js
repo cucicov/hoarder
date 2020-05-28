@@ -34,7 +34,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas3',//r_33
                 zIndex: -3,
@@ -51,7 +52,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas4',//r_21
                 zIndex: -4,
@@ -68,7 +70,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas5',//r_19_1
                 zIndex: 5,
@@ -85,7 +88,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
              {   id: 'canvas6',//r_19_2
                 zIndex: 6,
@@ -102,7 +106,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                 canvas: undefined
             },
              {   id: 'canvas7',//r_19_3
                 zIndex: 7,
@@ -119,7 +124,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                 canvas: undefined
             },
              {   id: 'canvas8',//r_19_4
                 zIndex: 8,
@@ -136,7 +142,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                 canvas: undefined
             },
             {   id: 'canvas8',//r_19_4
                 zIndex: 8,
@@ -153,7 +160,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas9',//r_19_5
                 zIndex: 9,
@@ -170,7 +178,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas10',//r_19_6
                 zIndex: 10,
@@ -187,7 +196,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas11',//r_19_7
                 zIndex: 11,
@@ -204,7 +214,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas12',//r_10_1
                 zIndex: 12,
@@ -221,7 +232,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas13',//r_10_2
                 zIndex: -13,
@@ -238,7 +250,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
              {   id: 'canvas14',//r_10_3
                 zIndex: -14,
@@ -255,7 +268,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                 canvas: undefined
             },
             {   id: 'canvas15',//r_10_4
                 zIndex: -15,
@@ -272,7 +286,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas16',//r_22_2
                 zIndex: -16,
@@ -289,7 +304,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas17',//r_22_1
                 zIndex: -17,
@@ -306,7 +322,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas18',//r_02_1 //cuplu rama maro
                 zIndex: -18,
@@ -323,7 +340,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas19',//r_02_2
                 zIndex: -19,
@@ -340,7 +358,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas20',//r_11_1 //doi tipi rama lemn 
                 zIndex: -15,
@@ -357,7 +376,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas21',//r_11_2
                 zIndex: -21,
@@ -374,7 +394,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas22',//r_03 masina
                 zIndex: -22,
@@ -391,7 +412,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
             {   id: 'canvas23',//r_12_1 poza clown - femeia 
                 zIndex: -23,
@@ -408,7 +430,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas24',//r_12_1 poza clown - barbat 
                 zIndex: -24,
@@ -425,7 +448,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas25',//r_12_1 poza clown - clown 
                 zIndex: -25,
@@ -442,7 +466,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
              {   id: 'canvas26',//r_04_1 familia
                 zIndex: -26,
@@ -459,7 +484,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                 canvas: undefined
             },
             {   id: 'canvas27',//r_04_2 familia
                 zIndex: -27,
@@ -476,7 +502,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas28',//r_04_3 familia
                 zIndex: -28,
@@ -493,7 +520,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             },
             {   id: 'canvas29',//r_04_4 familia
                 zIndex: -29,
@@ -510,7 +538,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
             {   id: 'canvas30',//r_23_1 femei rama maro 
                 zIndex: -30,
@@ -527,8 +556,9 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
-            }, 
+                actualVideoWidth: 200,
+                canvas: undefined
+            },
             {   id: 'canvas31',//r_23_2 femei rama maro 
                 zIndex: -31,
                 facePositionTopOffset: 1385,
@@ -561,7 +591,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
             {   id: 'canvas33',//r_13_2 femei fotoliu [poza mica]
                 zIndex: -33,
@@ -578,7 +609,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
              {   id: 'canvas34',//r_05_1 rama dubla
                 zIndex: -34,
@@ -595,7 +627,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                 canvas: undefined
             }, 
             {   id: 'canvas35',//r_05_2 rama dubla
                 zIndex: -35,
@@ -612,7 +645,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
             {   id: 'canvas36',//r_05_3 rama dubla
                 zIndex: -36,
@@ -629,7 +663,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
             {   id: 'canvas37',//r_14 rama argintie floricele
                 zIndex: -37,
@@ -646,7 +681,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
             {   id: 'canvas38',//r_26 rama aurie ovala
                 zIndex: -38,
@@ -663,7 +699,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
             {   id: 'canvas39',//r_15_1 rama argintie doua tipe
                 zIndex: -39,
@@ -680,7 +717,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
              {   id: 'canvas40',//r_15_2 rama argintie doua tipe
                 zIndex: -40,
@@ -697,7 +735,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                 canvas: undefined
             }, 
             {   id: 'canvas41',//r_16 rama perdea muste
                 zIndex: -41,
@@ -714,7 +753,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
             {   id: 'canvas42',//r_27_1 rama alba
                 zIndex: -42,
@@ -731,7 +771,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
              {   id: 'canvas43',//r_27_2 rama alba
                 zIndex: -43,
@@ -748,7 +789,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                 canvas: undefined
             }, 
             {   id: 'canvas44',//r_27_3 rama alba
                 zIndex: -44,
@@ -765,7 +807,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
             {   id: 'canvas45',//r_27_3 rama octagon lemn
                 zIndex: 45,
@@ -782,7 +825,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
             {   id: 'canvas45',//r_27_3 rama octagon lemn
                 zIndex: -45,
@@ -799,7 +843,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
             {   id: 'canvas46',//r_07 rama barbat fotoliu
                 zIndex: -46,
@@ -884,7 +929,8 @@ function getImagePositioningParams() {
                 boxHeightOffset: 130,
                 //do not edit below
                 actualVideoHeight: 200,
-                actualVideoWidth: 200
+                actualVideoWidth: 200,
+                canvas: undefined
             }, 
             {   id: 'canvas51',//r_18 mana
                 zIndex: -51,
