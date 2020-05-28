@@ -2,9 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ea2be0a-0e36-432d-8b0a-fe77a709a71f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/configuration_firstPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/configuration_firstPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder.htm" beforeDir="false" afterPath="$PROJECT_DIR$/img/Hoarder.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/about.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/alb_c1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/fishing_c01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/logoAR_transparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/p_c01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/ski_c01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/sp_c01.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,10 +104,10 @@
       <recent name="$PROJECT_DIR$/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/models" />
     </key>
   </component>
@@ -101,7 +140,7 @@
       <workItem from="1590143517132" duration="9112000" />
       <workItem from="1590168663446" duration="25409000" />
       <workItem from="1590353019693" duration="19000" />
-      <workItem from="1590437279395" duration="67623000" />
+      <workItem from="1590437279395" duration="68023000" />
     </task>
     <servers />
   </component>
@@ -139,6 +178,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="373" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.777@0.23.1280.777" timestamp="1590520325264" />
+    <state x="378" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590704799690">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="378" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1590704799690" />
     <state x="84" y="122" width="1147" height="630" key="DiffContextDialog" timestamp="1590686460372">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
