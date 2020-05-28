@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7ea2be0a-0e36-432d-8b0a-fe77a709a71f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/configuration_album1.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/configuration_album1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/configuration_firstPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/configuration_firstPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +101,7 @@
       <workItem from="1590143517132" duration="9112000" />
       <workItem from="1590168663446" duration="25409000" />
       <workItem from="1590353019693" duration="19000" />
-      <workItem from="1590437279395" duration="44564000" />
+      <workItem from="1590437279395" duration="50201000" />
     </task>
     <servers />
   </component>
@@ -139,11 +139,11 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="373" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.777@0.23.1280.777" timestamp="1590520325264" />
-    <state x="84" y="122" width="1147" height="630" key="DiffContextDialog" timestamp="1590622004544">
+    <state x="84" y="122" width="1147" height="630" key="DiffContextDialog" timestamp="1590686460372">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="1406" y="-342" width="1720" height="857" key="DiffContextDialog/0.23.1280.777/1280.-476.1920.1057@1280.-476.1920.1057" timestamp="1589489211606" />
-    <state x="84" y="122" width="1147" height="630" key="DiffContextDialog/0.23.1280.777@0.23.1280.777" timestamp="1590622004544" />
+    <state x="84" y="122" width="1147" height="630" key="DiffContextDialog/0.23.1280.777@0.23.1280.777" timestamp="1590686460372" />
     <state x="1406" y="-342" width="1720" height="857" key="DiffContextDialog/1280.-476.1920.1057/0.23.1280.777@1280.-476.1920.1057" timestamp="1590059780315" />
     <state width="949" height="338" key="GridCell.Tab.0.bottom" timestamp="1590105903576">
       <screen x="1280" y="-476" width="1920" height="1057" />

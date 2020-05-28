@@ -187,7 +187,11 @@ function updateCanvas(canvasInstance) {
     let canvasElement = `${localConfiguration.container} #${canvasInstance.id}`;
     let RATIO_RESIZE_WIDTH = activeImage.width() / activeImage.prop('naturalWidth');
     let RATIO_RESIZE_HEIGHT = activeImage.height() / activeImage.prop('naturalHeight');
-    let rightMarginForResponsiveness = $(localConfiguration.container).width() - canvasInstance.actualVideoWidth;
+    let rightMarginForResponsiveness = $(localConfiguration.container).width()
+        - canvasInstance.actualVideoWidth;
+    //prevent migration to left/up when scaling down the image
+    let originalVideoWidth = canvasInstance.actualVideoWidth;
+    let originalVideoHeight = canvasInstance.actualVideoHeight;
 
     if (localConfiguration.container !== '.card-columns') {
         // on bigger screens caption is bigger then the image. calculate this difference to give canvas appropriate margin left.
@@ -209,10 +213,16 @@ function updateCanvas(canvasInstance) {
         faceapi.matchDimensions(canvasInstance.canvas, displaySize);
     }
 
+    // revert images by running left/up when resized.
+    let canvasResizeDiffWidth = originalVideoWidth - canvasInstance.actualVideoWidth;
+    let canvasResizeDiffHeight = originalVideoHeight - canvasInstance.actualVideoHeight;
+    canvasResizeDiffWidth /= 2;
+    // canvasResizeDiffHeight /= 2;
+
     $(canvasElement).css({
-        left: carouselCaptionToImageDiff / 2 + canvasInstance.facePositionLeftOffset * RATIO_RESIZE_WIDTH,
+        left: carouselCaptionToImageDiff / 2 + (canvasInstance.facePositionLeftOffset * RATIO_RESIZE_WIDTH) + canvasResizeDiffWidth,
         right: rightMarginForResponsiveness, // automatically calculated margin to the right for responsiveness
-        top: canvasInstance.facePositionTopOffset * RATIO_RESIZE_HEIGHT
+        top: (canvasInstance.facePositionTopOffset * RATIO_RESIZE_HEIGHT) + canvasResizeDiffHeight
     });
 };
 
