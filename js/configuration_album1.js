@@ -247,7 +247,7 @@ function getImagePositioningParams() {
             {
                 id: 'canvas13',
                 zIndex: -2,
-                facePositionTopOffset: 165,
+                facePositionTopOffset: 160,
                 facePositionLeftOffset: 590,
                 ratio: 0.13,
                 filter: 'grayscale(100%) sepia(10%)',
@@ -267,7 +267,7 @@ function getImagePositioningParams() {
             {
                 id: 'canvas14',
                 zIndex: -3,
-                facePositionTopOffset: 150,
+                facePositionTopOffset: 145,
                 facePositionLeftOffset: 645,
                 ratio: 0.13,
                 filter: 'grayscale(100%) sepia(10%)',
@@ -287,7 +287,7 @@ function getImagePositioningParams() {
             {
                 id: 'canvas15',
                 zIndex: -4,
-                facePositionTopOffset: 495,
+                facePositionTopOffset: 490,
                 facePositionLeftOffset: 305,
                 ratio: 0.13,
                 filter: 'grayscale(100%) sepia(30%)',
@@ -307,7 +307,7 @@ function getImagePositioningParams() {
              {
                 id: 'canvas16',
                 zIndex: -5,
-                facePositionTopOffset: 495,
+                facePositionTopOffset: 490,
                 facePositionLeftOffset: 353,
                 ratio: 0.13,
                 filter: 'grayscale(100%) sepia(30%)',
@@ -451,9 +451,9 @@ function getImagePositioningParams() {
             {
                 id: 'canvas23',
                 zIndex: -2,
-                facePositionTopOffset: 400,
-                facePositionLeftOffset: 440,
-                ratio: 0.75,
+                facePositionTopOffset: 390,
+                facePositionLeftOffset: 430,
+                ratio: 0.8,
                 filter: 'grayscale(60%) sepia(0%)',
                 inverseMirror: false,
                 //--- big hole
@@ -653,7 +653,7 @@ function getImagePositioningParams() {
             {
                 id: 'canvas33',
                 zIndex: -10,
-                facePositionTopOffset: 580,
+                facePositionTopOffset: 575,
                 facePositionLeftOffset: 185,
                 ratio: 0.10,
                 filter: 'grayscale(100%) sepia(30%)',
@@ -673,11 +673,12 @@ function getImagePositioningParams() {
             {
                 id: 'canvas34',
                 zIndex: -11,
-                facePositionTopOffset: 420,
-                facePositionLeftOffset: 505,
+                facePositionTopOffset: 415,
+                facePositionLeftOffset: 500,
                 ratio: 0.10,
                 filter: 'grayscale(100%) sepia(30%)',
                 inverseMirror: false,
+                rotate: 'rotate(320deg);',
                 //---
                 faceHeight: 400,
                 faceWidth: 400,
@@ -693,8 +694,8 @@ function getImagePositioningParams() {
             {
                 id: 'canvas35',
                 zIndex: -12,
-                facePositionTopOffset: 580,
-                facePositionLeftOffset: 517,
+                facePositionTopOffset: 575,
+                facePositionLeftOffset: 515,
                 ratio: 0.10,
                 filter: 'grayscale(100%) sepia(30%)',
                 inverseMirror: false,
@@ -715,7 +716,7 @@ function getImagePositioningParams() {
             {
                 id: 'canvas36',
                 zIndex: -1,
-                facePositionTopOffset: 175,
+                facePositionTopOffset: 170,
                 facePositionLeftOffset: 345,
                 ratio: 0.05,
                 filter: 'grayscale(100%) sepia(30%)',
@@ -735,7 +736,7 @@ function getImagePositioningParams() {
             {
                 id: 'canvas37',
                 zIndex: -2,
-                facePositionTopOffset: 170,
+                facePositionTopOffset: 165,
                 facePositionLeftOffset: 380,
                 ratio: 0.05,
                 filter: 'grayscale(100%) sepia(30%)',
@@ -755,7 +756,7 @@ function getImagePositioningParams() {
             {
                 id: 'canvas38',
                 zIndex: -3,
-                facePositionTopOffset: 170,
+                facePositionTopOffset: 165,
                 facePositionLeftOffset: 420,
                 ratio: 0.05,
                 filter: 'grayscale(100%) sepia(30%)',
@@ -775,7 +776,7 @@ function getImagePositioningParams() {
             {
                 id: 'canvas39',
                 zIndex: -4,
-                facePositionTopOffset: 385,
+                facePositionTopOffset: 380,
                 facePositionLeftOffset: 310,
                 ratio: 0.10,
                 filter: 'grayscale(100%) sepia(30%)',
@@ -795,7 +796,7 @@ function getImagePositioningParams() {
             {
                 id: 'canvas40',
                 zIndex: -5,
-                facePositionTopOffset: 350,
+                facePositionTopOffset: 345,
                 facePositionLeftOffset: 380,
                 ratio: 0.10,
                 filter: 'grayscale(100%) sepia(30%)',
@@ -815,7 +816,7 @@ function getImagePositioningParams() {
             {
                 id: 'canvas41',
                 zIndex: -6,
-                facePositionTopOffset: 355,
+                facePositionTopOffset: 350,
                 facePositionLeftOffset: 420,
                 ratio: 0.10,
                 filter: 'grayscale(100%) sepia(30%)',
@@ -855,8 +856,8 @@ function getImagePositioningParams() {
             {
                 id: 'canvas43',
                 zIndex: -8,
-                facePositionTopOffset: 175,
-                facePositionLeftOffset: 645,
+                facePositionTopOffset: 170,
+                facePositionLeftOffset: 640,
                 ratio: 0.15,
                 filter: 'grayscale(100%) sepia(10%)',
                 inverseMirror: true,

@@ -11,7 +11,7 @@ let configurationMappings = {
         container: ".card-columns"
     },
     album1: {
-        configFile: "js/configuration.js",
+        configFile: "js/configuration_album1.js",
         container: "#myCarousel"
     },
     ski:{
