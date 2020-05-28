@@ -217,7 +217,7 @@ function updateCanvas(canvasInstance) {
     let canvasResizeDiffWidth = originalVideoWidth - canvasInstance.actualVideoWidth;
     let canvasResizeDiffHeight = originalVideoHeight - canvasInstance.actualVideoHeight;
     canvasResizeDiffWidth /= 2;
-    // canvasResizeDiffHeight /= 2;
+    canvasResizeDiffHeight /= 2;
 
     $(canvasElement).css({
         left: carouselCaptionToImageDiff / 2 + (canvasInstance.facePositionLeftOffset * RATIO_RESIZE_WIDTH) + canvasResizeDiffWidth,
