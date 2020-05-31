@@ -2,48 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ea2be0a-0e36-432d-8b0a-fe77a709a71f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/img/Hoarder.htm" beforeDir="false" afterPath="$PROJECT_DIR$/img/Hoarder.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/about.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/ajax-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/alb_c1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/fishing_c01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/logoAR_transparent.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/p_c01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/r_33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/ski_c01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Hoarder_files/sp_c01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/configuration_firstPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/configuration_firstPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/css/bootstrap.css" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1bXuooRkIjDW7hDtMRDxmpm2hwi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -140,7 +104,8 @@
       <workItem from="1590143517132" duration="9112000" />
       <workItem from="1590168663446" duration="25409000" />
       <workItem from="1590353019693" duration="19000" />
-      <workItem from="1590437279395" duration="68023000" />
+      <workItem from="1590437279395" duration="68816000" />
+      <workItem from="1590847289404" duration="19004000" />
     </task>
     <servers />
   </component>
