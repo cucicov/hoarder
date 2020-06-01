@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7ea2be0a-0e36-432d-8b0a-fe77a709a71f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO" beforeDir="false" afterPath="$PROJECT_DIR$/TODO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/configuration_firstPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/configuration_firstPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fishing.html" beforeDir="false" afterPath="$PROJECT_DIR$/fishing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/configuration_album2.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/configuration_album2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/configuration_fishing.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/configuration_fishing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/configuration_ski.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/configuration_ski.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +30,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/css/bootstrap.css" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1bXuooRkIjDW7hDtMRDxmpm2hwi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -67,10 +71,10 @@
       <recent name="$PROJECT_DIR$/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/models" />
     </key>
   </component>
@@ -103,7 +107,9 @@
       <workItem from="1590143517132" duration="9112000" />
       <workItem from="1590168663446" duration="25409000" />
       <workItem from="1590353019693" duration="19000" />
-      <workItem from="1590437279395" duration="57612000" />
+      <workItem from="1590437279395" duration="68816000" />
+      <workItem from="1590847289404" duration="19794000" />
+      <workItem from="1590999955812" duration="10758000" />
     </task>
     <servers />
   </component>
@@ -141,6 +147,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="373" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.777@0.23.1280.777" timestamp="1590520325264" />
+    <state x="378" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590704799690">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="378" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.777@0.23.1280.777" timestamp="1590704799690" />
     <state x="84" y="122" width="1147" height="630" key="DiffContextDialog" timestamp="1590686460372">
       <screen x="0" y="23" width="1280" height="777" />
     </state>

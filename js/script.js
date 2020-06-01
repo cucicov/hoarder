@@ -270,6 +270,9 @@ function getCanvasParameters(imageName) {
     return imagePositioningParams.hasOwnProperty(imageName) ? imagePositioningParams[imageName] : undefined;
 }
 
+let activeCameraIds = [];
+let firstIteration = true;
+
 function drawCanvases() {
     setInterval(async () => {
         if (!isAllModalsHidden) {
@@ -280,7 +283,21 @@ function drawCanvases() {
 
             let canvasParameters = getCanvasParameters(imageName);
             if (canvasParameters !== undefined && video.readyState === 4) {
+
+                let updateCameras = false;
+                if (Math.random() < 0.4) {
+                    updateCameras = true;
+                    activeCameraIds = [];
+                }
                 for (let canvasInstance of canvasParameters) {
+                    if (firstIteration) {
+                        activeCameraIds.push(canvasInstance.id);
+                        firstIteration = false;
+                    } else if (updateCameras) {
+                        if (Math.random() < 0.4) {
+                            activeCameraIds.push(canvasInstance.id);
+                        }
+                    }
                     canvasInstance.canvas = faceapi.createCanvasFromMedia(video);
                     let rotateParameter = canvasInstance.rotate === undefined ? '' : canvasInstance.rotate;
                     canvasInstance.canvas.setAttribute('style', `z-index: ${canvasInstance.zIndex}; 
@@ -290,6 +307,8 @@ function drawCanvases() {
 
                 if (alignedRect) {
                     for (let canvasInstance of canvasParameters) {
+                        console.log(activeCameraIds);
+                        if (activeCameraIds.includes(canvasInstance.id)) {
                         let carouselContainer = $(`${localConfiguration.container} .active .carousel-caption`);
                         if (!carouselContainer.length) { // if first page - there is no carousel so place directly in container.
                             carouselContainer = $(localConfiguration.container);
@@ -311,6 +330,7 @@ function drawCanvases() {
                         // By default it is 0,1. The last two are the origin. Where on the canvas something will be drawn if you draw at 0,0. By default it is at 0,0 top left.
                         
                         context.setTransform(canvasInstance.inverseMirror ? 1 : -1, 0, 0, 1, canvasInstance.inverseMirror ? 0 : canvasInstance.canvas.width, 0);
+
                         context.drawImage(video,
                             alignedRect.box.x + canvasInstance.boxXOffset,
                             alignedRect.box.y + canvasInstance.boxYOffset,
@@ -320,6 +340,7 @@ function drawCanvases() {
                             0,
                             canvasInstance.actualVideoWidth,
                             canvasInstance.actualVideoHeight);
+                    }
                     }
                 }
             }

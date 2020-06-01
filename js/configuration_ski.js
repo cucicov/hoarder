@@ -4,9 +4,9 @@ function getImagePositioningParams() {
             {
                 id: 'canvas1',
                 zIndex: -1,
-                facePositionTopOffset: 365,
-                facePositionLeftOffset: 297,
-                ratio: 0.16,
+                facePositionTopOffset: 330,
+                facePositionLeftOffset: 285,
+                ratio: 0.2,
                 filter: 'grayscale(100%) sepia(0%)',
                 inverseMirror: false,
                 //---
@@ -24,9 +24,9 @@ function getImagePositioningParams() {
             {
                 id: 'canvas2',
                 zIndex: -2,
-                facePositionTopOffset: 370,
-                facePositionLeftOffset: 600,
-                ratio: 0.16,
+                facePositionTopOffset: 335,
+                facePositionLeftOffset: 578,
+                ratio: 0.2,
                 filter: 'grayscale(100%) sepia(0%)',
                 inverseMirror: false,
                 //---
@@ -44,9 +44,9 @@ function getImagePositioningParams() {
             {
                 id: 'canvas3',
                 zIndex: -3,
-                facePositionTopOffset: 380,
-                facePositionLeftOffset: 885,
-                ratio: 0.12,
+                facePositionTopOffset: 340,
+                facePositionLeftOffset: 870,
+                ratio: 0.21,
                 filter: 'grayscale(100%) sepia(0%)',
                 inverseMirror: false,
                 //---
@@ -64,9 +64,9 @@ function getImagePositioningParams() {
             {
                 id: 'canvas4',
                 zIndex: -4,
-                facePositionTopOffset: 760,
-                facePositionLeftOffset: 445,
-                ratio: 0.20,
+                facePositionTopOffset: 735,
+                facePositionLeftOffset: 433,
+                ratio: 0.22,
                 filter: 'grayscale(100%) sepia(0%)',
                 inverseMirror: false,
                 //---
@@ -84,10 +84,10 @@ function getImagePositioningParams() {
          ],
          ski_05: [
             {
-                id: 'canvas1',
+                id: 'canvas5',
                 zIndex: -1,
-                facePositionTopOffset: 805,
-                facePositionLeftOffset: 310,
+                facePositionTopOffset: 790,
+                facePositionLeftOffset: 312,
                 ratio: 0.16,
                 filter: 'grayscale(100%) sepia(0%)',
                 inverseMirror: false,
@@ -104,10 +104,10 @@ function getImagePositioningParams() {
                 canvas: undefined
             },
             {
-                id: 'canvas2',
+                id: 'canvas6',
                 zIndex: -2,
-                facePositionTopOffset: 885,
-                facePositionLeftOffset: 605,
+                facePositionTopOffset: 865,
+                facePositionLeftOffset: 620,
                 ratio: 0.12,
                 filter: 'grayscale(100%) sepia(0%)',
                 inverseMirror: false,
@@ -124,11 +124,11 @@ function getImagePositioningParams() {
                 canvas: undefined
             },
             {
-                id: 'canvas3',
+                id: 'canvas7',
                 zIndex: -3,
-                facePositionTopOffset: 825,
-                facePositionLeftOffset: 990,
-                ratio: 0.12,
+                facePositionTopOffset: 805,
+                facePositionLeftOffset: 975,
+                ratio: 0.15,
                 filter: 'grayscale(100%) sepia(10%)',
                 inverseMirror: false,
                 //---
@@ -146,10 +146,10 @@ function getImagePositioningParams() {
         ],
         ski_09: [
             {
-                id: 'canvas1',
+                id: 'canvas8',
                 zIndex: -1,
-                facePositionTopOffset: 555,
-                facePositionLeftOffset: 830,
+                facePositionTopOffset: 545,
+                facePositionLeftOffset: 825,
                 ratio: 0.08,
                 filter: 'grayscale(100%) sepia(0%)',
                 inverseMirror: false,
@@ -166,10 +166,10 @@ function getImagePositioningParams() {
                 canvas: undefined
             },
             {
-                id: 'canvas2',
+                id: 'canvas9',
                 zIndex: -2,
-                facePositionTopOffset: 560,
-                facePositionLeftOffset: 870,
+                facePositionTopOffset: 550,
+                facePositionLeftOffset: 865,
                 ratio: 0.08,
                 filter: 'grayscale(100%) sepia(0%)',
                 inverseMirror: false,
@@ -184,7 +184,7 @@ function getImagePositioningParams() {
                 actualVideoHeight: 200,
                 actualVideoWidth: 200,
                 canvas: undefined
-            }, 
+            }
         ]
 
 
