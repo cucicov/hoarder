@@ -108,7 +108,7 @@ function getImagePositioningParams() {
             {
                 id: 'canvas6',
                 zIndex: -1,
-                facePositionTopOffset: 620,
+                facePositionTopOffset: 610,
                 facePositionLeftOffset: 490,
                 ratio: 0.22,
                 filter: 'grayscale(0%) sepia(0%) ',
